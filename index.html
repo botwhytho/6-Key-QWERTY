@@ -1,0 +1,75 @@
+<div style="margin: auto;width: 50%;">
+<textarea class="6keys" rows="20" cols="80" readonly="true">
+</textarea>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./keymap.js"></script>
+<script>
+  window.onload=function() {
+    var homeRow = ["l","k","j","f","d","s"];
+    // var numPad1 = ["1","2","3","7","8","9"]
+    var numPad2 = ["+","6","5","=","/","*"];
+    var keys = homeRow;
+    var bits = 0;
+    var shift = 0;
+    var numShift = 0;
+
+    $(document).keydown(function(e) {
+      console.log(e.originalEvent.key);
+      if (bits == 7) {
+        $(".6keys").text($(".6keys").text().slice(0,-1));
+      } else {
+        switch (e.originalEvent.key) {
+          case keys[0]: //l
+            bits|= 1;
+            break;
+          case keys[1]: //k
+            bits|= 2;
+            break;
+          case keys[2]: //j
+            bits|= 4;
+            break;
+          case keys[3]: //f
+            bits|= 8;
+            break;
+          case keys[4]: //d
+            bits|= 16;
+            break;
+          case keys[5]: //s
+            bits|= 32;
+            break;
+        }
+      }
+
+      return false;
+    });
+
+    $(document).keyup(function(e) {
+      if (keys.indexOf(e.originalEvent.key) != -1 && bits > 0) {
+        console.log("bits " + bits);
+        switch (bits) {
+          case 7:
+            $(".6keys").text($(".6keys").text().slice(0,-1));
+            break;
+          case 18:
+            shift = (shift + 1) % 3;
+            console.log("shift " + shift);
+            break;
+          case 12:
+            numShift = (numShift + 2) % 6;
+            console.log("numShift " + numShift);
+            break;
+          default:
+            if (bits in letters) {
+              $(".6keys").append(shift > 0 ? letters[bits][1 + numShift] : letters[bits][0 + numShift]);
+              shift = shift == 1 ? 0 : shift;
+            }
+            break;
+        }
+      }
+      bits = 0;
+      return false;
+    });
+
+  }
+</script>
