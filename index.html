@@ -157,6 +157,7 @@
         }
       }
       bits = 0;
+      d3.select(svg).selectAll(".home").style("opacity",1);
       if (keys.indexOf(e.originalEvent.key) != -1) {
         switch (numShift) {
           case 0:
@@ -173,7 +174,7 @@
       }
     });
 
-    $.get("/6-Key-QWERTY/Qwerty-No-Numpad.svg", function(data) {
+    $.get("/6-Key-QWERTY/Qwerty-Second-Homerow.svg", function(data) {
       $(".svg-wrapper").html(data);
       svg = d3.select("#svg2").node();
     },"text")
@@ -201,6 +202,12 @@
         return ((parseInt(el.id.split(".")[2]) & bit) == 0);
       });
       d3.selectAll(exclude).style("opacity",0.25);
+
+      d3.select(svg).selectAll(".home").style("opacity",0.25);
+      var home = d3.select(svg).selectAll(".home").nodes().filter( function(el) {
+        return ((parseInt(el.id.split(".")[2]) & bits) > 0);
+      });
+      d3.selectAll(home).style("opacity",1);
     }
 
   }
