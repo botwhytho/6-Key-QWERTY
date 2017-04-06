@@ -33,7 +33,7 @@
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:zoom="1.2248258"
-     inkscape:cx="288.29408"
+     inkscape:cx="328.3071"
      inkscape:cy="161.42303"
      inkscape:window-x="2"
      inkscape:window-y="0"
@@ -832,8 +832,8 @@
            y="192"
            x="400">Alt</text>
 </g></g><g
-       id="g5364"
-       class="key mapped"><path
+       id="key.9.1"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path29"
@@ -852,8 +852,8 @@
            y="194"
            x="400">(</text>
 </g></g><g
-       id="g5371"
-       class="key mapped"><path
+       id="key.0.5"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path31"
@@ -872,8 +872,8 @@
            y="194"
            x="400">)</text>
 </g></g><g
-       id="g5357"
-       class="key mapped"><path
+       id="key.8.2"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path27"
@@ -892,8 +892,8 @@
            y="194"
            x="400">*</text>
 </g></g><g
-       id="g5350"
-       class="key mapped"><path
+       id="key.7.4"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path25"
@@ -912,8 +912,8 @@
            y="192"
            x="400">&amp;</text>
 </g></g><g
-       id="g5343"
-       class="key mapped"><path
+       id="key.6.42"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path23"
@@ -932,8 +932,8 @@
            y="192"
            x="400">^</text>
 </g></g><g
-       id="g5336"
-       class="key mapped"><path
+       id="key.5.21"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path21"
@@ -952,8 +952,8 @@
            y="192"
            x="400">%</text>
 </g></g><g
-       id="g5329"
-       class="key mapped"><path
+       id="key.4.8"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path19"
@@ -972,8 +972,8 @@
            y="192"
            x="400">$</text>
 </g></g><g
-       id="g5322"
-       class="key mapped"><path
+       id="key.3.16"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path17"
@@ -992,8 +992,8 @@
            y="192"
            x="400">#</text>
 </g></g><g
-       id="g5315"
-       class="key mapped"><path
+       id="key.2.32"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path15"
@@ -1012,8 +1012,8 @@
            y="192"
            x="400">@</text>
 </g></g><g
-       id="g5308"
-       class="key mapped"><path
+       id="key.1.40"
+       class="key mapped numShift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path13"
@@ -1032,8 +1032,8 @@
            y="192"
            x="400">!</text>
 </g></g><g
-       id="g5546"
-       class="key"><path
+       id="key.shift.left"
+       class="key shift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path561"
@@ -1045,8 +1045,8 @@
            y="192"
            x="400">Shift</text>
 </g></g><g
-       id="g5607"
-       class="key"><path
+       id="key.shift.right"
+       class="key shift"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path551"
@@ -1058,8 +1058,8 @@
            y="192"
            x="400">Shift</text>
 </g></g><g
-       id="g5301"
-       class="key"><path
+       id="key.tilde.10"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path11"
@@ -1078,7 +1078,7 @@
            y="192"
            x="400">~</text>
 </g></g><g
-       id="g5482"
+       id="key-caps"
        class="key"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -1098,8 +1098,8 @@
            y="192"
            x="400">Lock</text>
 </g></g><g
-       id="g5378"
-       class="key"><path
+       id="key.dash.8"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path33"
@@ -1118,8 +1118,8 @@
            y="192"
            x="400">_</text>
 </g></g><g
-       id="g5385"
-       class="key"><path
+       id="key.equals.4"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path35"
@@ -1138,8 +1138,8 @@
            y="192"
            x="400">+</text>
 </g></g><g
-       id="g5392"
-       class="key"><path
+       id="key.backslash.1"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path37"
@@ -1158,8 +1158,8 @@
            y="194"
            x="400">|</text>
 </g></g><g
-       id="g5468"
-       class="key"><path
+       id="key.leftBrace.16"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path61"
@@ -1178,8 +1178,8 @@
            y="192"
            x="400">{</text>
 </g></g><g
-       id="g5475"
-       class="key"><path
+       id="key.rightBrace.2"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path63"
@@ -1218,8 +1218,8 @@
            y="192"
            x="400">:</text>
 </g></g><g
-       id="g5541"
-       class="key"><path
+       id="key.quotes.32"
+       class="key mapped numShift2"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
          id="path85"
