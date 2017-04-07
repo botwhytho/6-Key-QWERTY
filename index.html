@@ -155,6 +155,7 @@
       }
       bits = 0;
       d3.select(svg).selectAll(".home").style("opacity",1);
+      d3.select(svg).selectAll(".mapped").selectAll("path").style("fill",blueColor);
       if (keys.indexOf(e.originalEvent.key) != -1) {
         switch (numShift) {
           case 0:
@@ -171,7 +172,8 @@
       }
     });
 
-    $.get("/6-Key-QWERTY/Qwerty-Second-Homerow.svg", function(data) {
+    // $.get("/6-Key-QWERTY/Qwerty-Second-Homerow.svg", function(data) {
+      $.get("./Qwerty-Second-Homerow.svg", function(data) {
       $(".svg-wrapper").html(data);
       svg = d3.select("#svg2").node();
     },"text")
@@ -194,17 +196,56 @@
           selectorString = ".numShift2";
           break;
       }
+      // Reducing the opacity on keys that cannot be typed at the moment
       d3.select(svg).selectAll(".key:not(.control):not("+selectorString+")").style("opacity",0.25);
       var exclude = d3.select(svg).selectAll(".control,"+selectorString).nodes().filter( function(el) {
         return ((parseInt(el.id.split("-")[2]) & bit) == 0);
       });
       d3.selectAll(exclude).style("opacity",0.25);
 
+      // Reduce the opacity of the 'home' keys that are not being pressed currently.
       d3.select(svg).selectAll(".home").style("opacity",0.5);
       var home = d3.select(svg).selectAll(".home").nodes().filter( function(el) {
         return ((parseInt(el.id.split("-")[2]) & bits) > 0);
       });
       d3.selectAll(home).style("opacity",1);
+
+      // Modify the fill of potential keys presses so people know what to press next to type that key
+      var include = d3.select(svg).selectAll(".control,"+selectorString).nodes().filter( function(el) {
+        return ((parseInt(el.id.split("-")[2]) & bit) > 0);
+      })
+
+      d3.selectAll(include).selectAll("path")
+      .style("fill", function() {
+        var shiftBits = parseInt(this.parentNode.id.split("-")[2]) - bit;
+        var shiftBits2 = shiftBits;
+        var keyCombination = {};
+        keyCombination[shiftBits2] = [];
+        var place = 0;
+        while (shiftBits > 0) {
+          // console.log((shiftBits & 1) + " at position " + Math.pow(2,place));
+          if ( (shiftBits & 1) == 1 ) {
+            var tmp = d3.select(svg).selectAll(".home").nodes().filter( function(el){
+              return (parseInt(el.id.split("-")[2]) == Math.pow(2,place))
+            });
+            // need to push into an array of different fill strings
+            // if the array length is 1 return a string
+            // if the array has two elements then create a gradient in defs if it doesn't exist and provide as fill
+            // return d3.selectAll(tmp).selectAll("path").style("fill");// || this.style("fill");
+            keyCombination[shiftBits2].unshift(d3.selectAll(tmp).selectAll("path").style("fill"));
+          }
+          shiftBits >>>= 1;
+          place ++;
+        }
+
+        if (keyCombination[shiftBits2].length == 1) {
+          return keyCombination[shiftBits2][0];
+        } else {
+          return "purple";
+        }
+
+      });
+
     }
 
   }
