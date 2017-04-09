@@ -33,7 +33,7 @@
      inkscape:snap-bbox="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:zoom="1.2248258"
-     inkscape:cx="284.46669"
+     inkscape:cx="345.00821"
      inkscape:cy="161.42303"
      inkscape:window-x="2"
      inkscape:window-y="0"
@@ -126,7 +126,7 @@
            y="192"
            x="400">Q</text>
 </g></g><g
-       id="key-q-38"
+       id="key-w-38"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -256,7 +256,7 @@
            y="192"
            x="400">A</text>
 </g></g><g
-       id="g4984"
+       id="key-s-32"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -269,7 +269,7 @@
            y="192"
            x="400">S</text>
 </g></g><g
-       id="g4986"
+       id="key-d-16"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -282,7 +282,7 @@
            y="192"
            x="400">D</text>
 </g></g><g
-       id="g4988"
+       id="key-f-8"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -321,7 +321,7 @@
            y="192"
            x="400">H</text>
 </g></g><g
-       id="g4990"
+       id="key-j-4"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -334,7 +334,7 @@
            y="192"
            x="400">J</text>
 </g></g><g
-       id="g4992"
+       id="key-k-2"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -347,7 +347,7 @@
            y="192"
            x="400">K</text>
 </g></g><g
-       id="g4994"
+       id="key-l-1"
        class="key mapped numShift0"><path
          inkscape:connector-curvature="0"
          style="fill:#97c5d5;stroke:#202326;stroke-width:0"
@@ -1403,7 +1403,7 @@
          id="path11623-1-0"
          d="M 480.60075,106.84773 H 465.58196" /></g><g
        class="home"
-       id="key-s-32"
+       id="homekey-s-32"
        transform="translate(0,-124)"><path
          d="m 132,147 h 20 c 1,0 3,1 3,2 v 19 c 0,1 -2,2 -3,2 h -20 c -2,0 -3,-1 -3,-2 v -19 c 0,-1 1,-2 3,-2 z"
          id="path4933"
@@ -1417,7 +1417,7 @@
            style="font-weight:normal;font-size:18px;font-family:Arial;fill:#2b2828">S</text>
 </g></g><g
        class="home"
-       id="key-d-16"
+       id="homekey-d-16"
        transform="translate(0,-124)"><path
          d="m 162,147 h 20 c 2,0 3,1 3,2 v 19 c 0,1 -1,2 -3,2 h -20 c -2,0 -3,-1 -3,-2 v -19 c 0,-1 1,-2 3,-2 z"
          id="path4941"
@@ -1431,7 +1431,7 @@
            style="font-weight:normal;font-size:18px;font-family:Arial;fill:#2b2828">D</text>
 </g></g><g
        class="home"
-       id="key-f-8"
+       id="homekey-f-8"
        transform="translate(0,-124)"><path
          d="m 192,147 h 19 c 2,0 3,1 3,2 v 19 c 0,1 -1,2 -3,2 h -19 c -2,0 -3,-1 -3,-2 v -19 c 0,-1 1,-2 3,-2 z"
          id="path4949"
@@ -1445,7 +1445,7 @@
            style="font-weight:normal;font-size:18px;font-family:Arial;fill:#2b2828">F</text>
 </g></g><g
        class="home"
-       id="key-j-4"
+       id="homekey-j-4"
        transform="translate(0,-124)"><path
          d="m 281,147 h 19 c 2,0 3,1 3,2 v 19 c 0,1 -1,2 -3,2 h -19 c -1,0 -3,-1 -3,-2 v -19 c 0,-1 2,-2 3,-2 z"
          id="path4957"
@@ -1459,7 +1459,7 @@
            style="font-weight:normal;font-size:18px;font-family:Arial;fill:#2b2828">J</text>
 </g></g><g
        class="home"
-       id="key-k-2"
+       id="homekey-k-2"
        transform="translate(0,-124)"><path
          d="m 310,147 h 20 c 2,0 3,1 3,2 v 19 c 0,1 -1,2 -3,2 h -20 c -1,0 -3,-1 -3,-2 v -19 c 0,-1 2,-2 3,-2 z"
          id="path4965"
@@ -1473,7 +1473,7 @@
            style="font-weight:normal;font-size:18px;font-family:Arial;fill:#2b2828">K</text>
 </g></g><g
        class="home"
-       id="key-l-1"
+       id="homekey-l-1"
        transform="translate(0,-124)"><path
          d="m 340,147 h 20 c 2,0 3,1 3,2 v 19 c 0,1 -1,2 -3,2 h -20 c -1,0 -3,-1 -3,-2 v -19 c 0,-1 2,-2 3,-2 z"
          id="path4973"
