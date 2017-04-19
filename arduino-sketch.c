@@ -21,7 +21,7 @@ char letters[63] = {0,108,
   103,
   101,
   0,
-  0,
+  113,
   111,
   105,
   0,
@@ -38,7 +38,7 @@ char letters[63] = {0,108,
   119,
   13,
   97,
-  101,
+  110,
   104,
   0,
   121,
@@ -69,99 +69,153 @@ int oldThree = HIGH;
 int oldFour = HIGH;
 int oldFive = HIGH;
 int oldSix = HIGH;
-int oldTest = HIGH;
 int bits = 0;
+
+int newOne;
+int newTwo;
+int newThree;
+int newFour;
+int newFive;
+int newSix;
+
+unsigned long lastDebounceTime = 0;  // the last time the output pin was toggled
+unsigned long debounceDelay = 1;    // the debounce time; increase if the output flickers
 
 void setup() {
   //start serial connection
   Serial.begin(9600);
   //configure pins as an input and enable the internal pull-up resistor
-  pinMode(2,INPUT_PULLUP);
-  pinMode(3,INPUT_PULLUP);
-  pinMode(4,INPUT_PULLUP);
-  pinMode(5,INPUT_PULLUP);
-  pinMode(6,INPUT_PULLUP);
-  pinMode(7,INPUT_PULLUP);
-  pinMode(8,INPUT_PULLUP);
+  pinMode(5,INPUT_PULLUP);  // l
+  pinMode(3,INPUT_PULLUP);  // k
+  pinMode(2,INPUT_PULLUP);  // j
+  pinMode(A5,INPUT_PULLUP); // f
+  pinMode(A2,INPUT_PULLUP); // d
+  pinMode(A0,INPUT_PULLUP); // s
 }
 
 void loop() {
   //read the pushbutton value into a variable
-  int newOne = digitalRead(2);
-  int newTwo = digitalRead(3);
-  int newThree = digitalRead(4);
-  int newFour = digitalRead(5);
-  int newFive = digitalRead(6);
-  int newSix = digitalRead(7);
-  int newTest = digitalRead(8);
+  int One = digitalRead(5);
+  int Two = digitalRead(3);
+  int Three = digitalRead(2);
+  int Four = digitalRead(A5);
+  int Five = digitalRead(A2);
+  int Six = digitalRead(A0);
 
-  if (oldTest != newTest) {
-    oldTest = newTest;
-    if (newTest == LOW) {
-      Serial.print(letters[bits]);
-      bits = 0;
-    }
+
+  if (oldOne != One) {
+    lastDebounceTime = millis();
   }
 
-  if (oldOne != newOne) {
-    oldOne = newOne;
-    if (newOne == LOW) {
-      bits |= 16;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (One != newOne) {
+      newOne = One;
+      if (newOne == LOW) {
+        bits |= 1;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
-  if (oldTwo != newTwo) {
-    oldTwo = newTwo;
-    if (newTwo == LOW) {
-      bits |= 32;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+
+  if (oldTwo != Two) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (Two != newTwo) {
+      newTwo = Two;
+      if (newTwo == LOW) {
+        bits |= 2;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
-  if (oldThree != newThree) {
-    oldThree = newThree;
-    if (newThree == LOW) {
-      bits |= 1;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+
+  if (oldThree != Three) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (Three != newThree) {
+      newThree = Three;
+      if (newThree == LOW) {
+        bits |= 4;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
-  if (oldFour != newFour) {
-    oldFour = newFour;
-    if (oldFour == LOW) {
-      bits |= 2;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+
+  if (oldFour != Four) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (Four != newFour) {
+      newFour = Four;
+      if (newFour == LOW) {
+        bits |= 8;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
-  if (oldFive != newFive) {
-    oldFive = newFive;
-    if (oldFive == LOW) {
-      bits |= 4;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+
+  if (oldFive != Five) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (Five != newFive) {
+      newFive = Five;
+      if (newFive == LOW) {
+        bits |= 16;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
-  if (oldSix != newSix) {
-    oldSix = newSix;
-    if (oldSix == LOW) {
-      bits |= 8;
-      // Serial.println(bits);
-    } else {
-      // Serial.println(letters[bits]);
-      // bits = 0;
+
+  if (oldSix != Six) {
+    lastDebounceTime = millis();
+  }
+
+  if ((millis() - lastDebounceTime) > debounceDelay) {
+    if (Six != newSix) {
+      newSix = Six;
+      if (newSix == LOW) {
+        bits |= 32;
+      } else {
+        if ( letters[bits] > 0 ) {
+          Serial.println(letters[bits]);
+        }
+        bits = 0;
+      }
     }
   }
+
+  oldOne = One;
+  oldTwo = Two;
+  oldThree = Three;
+  oldFour = Four;
+  oldFive = Five;
+  oldSix = Six;
 
 }
